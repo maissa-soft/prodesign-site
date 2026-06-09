@@ -173,10 +173,10 @@ const translations = {
     "contact-lead": "دعنا نتحدث عن مشروعك",
     "contact-heading": "اتصل بنا <br>لنجسد أفكارك!",
     "contact-desc": "هل لديك احتياج خاص أو ترغب في معرفة المزيد عن إحدى خدماتنا؟ املأ الاستمارة وسنقوم بالرد عليك في غضون 24 ساعة لدراسة مشروعك معًا.",
-    "contact-email-label": "البريد الإلكتروني المهني",
+    "contact-email-label": "البريد الإلكتروني",
     "contact-phone-label": "الهاتف / واتساب",
     "contact-address-label": "المقر الرئيسي",
-    "contact-address-val": "القسنطينة، الجزائر",
+    "contact-address-val": "قسنطينة، الجزائر",
 
     // Contact Form
     "form-name-lbl": "الاسم الكامل *",
