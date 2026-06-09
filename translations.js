@@ -70,7 +70,7 @@ const translations = {
     "contact-email-label": "E-mail professionnel",
     "contact-phone-label": "Téléphone / WhatsApp",
     "contact-address-label": "Siège Social",
-    "contact-address-val": "Casablanca, Maroc",
+    "contact-address-val": "Constantine, Algérie",
 
     // Contact Form
     "form-name-lbl": "Nom complet *",
@@ -176,7 +176,7 @@ const translations = {
     "contact-email-label": "البريد الإلكتروني المهني",
     "contact-phone-label": "الهاتف / واتساب",
     "contact-address-label": "المقر الرئيسي",
-    "contact-address-val": "الدار البيضاء، المغرب",
+    "contact-address-val": "القسنطينة، الجزائر",
 
     // Contact Form
     "form-name-lbl": "الاسم الكامل *",
