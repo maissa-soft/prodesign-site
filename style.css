@@ -210,10 +210,12 @@ header.scrolled .nav-container {
   height: 70px;
 }
 
-.logo-link img {
-  height: auto;
-  width: 180px;
-  max-height: 80px;
+.logo-link img,
+.header-logo {
+  height: 60px;
+  width: auto;
+  max-height: 100%;
+  object-fit: contain;
   transition: var(--transition-smooth);
 }
 
@@ -965,6 +967,7 @@ footer {
 .footer-logo {
   height: 90px;
   width: auto;
+  object-fit: contain;
   margin-bottom: 24px;
 }
 
@@ -1293,7 +1296,9 @@ footer {
 
 @media (max-width: 768px) {
   .header-logo {
-    width: 120px !important;
+    height: 48px !important;
+    width: auto !important;
+    object-fit: contain;
   }
   .nav-right-wrapper {
     gap: 10px !important;
