@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIRMIZI | Détail du Produit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-symbol.svg">
+  <style>
+    .product-detail-section {
+      padding: 160px 0 100px 0;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+    }
+    .product-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .product-image-container {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      background-color: var(--navy-primary);
+    }
+    .product-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .product-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .product-price {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      background-color: rgba(204, 164, 59, 0.1);
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      display: inline-block;
+      width: fit-content;
+    }
+    .product-title {
+      font-size: 2.5rem;
+      color: var(--navy-primary);
+      margin-bottom: 10px;
+    }
+    .product-desc {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--navy-primary);
+      font-weight: 600;
+      margin-bottom: 20px;
+      text-decoration: none;
+      transition: var(--transition-smooth);
+    }
+    .back-link:hover {
+      color: var(--gold-primary);
+    }
+    @media (max-width: 768px) {
+      .product-detail-grid {
+        grid-template-columns: 1fr;
+      }
+      .product-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header id="header" class="scrolled">
+    <div class="container">
+      <nav class="nav-container">
+        <a href="index.html" class="logo-link" id="logo-nav">
+          <img src="assets/logo-kirmizi.png" alt="KIRMIZI Logo" width="180" height="auto" style="max-height: 80px;">
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html#accueil" class="nav-link" data-i18n="nav-accueil">Accueil</a></li>
+          <li><a href="index.html#services" class="nav-link" data-i18n="nav-services">Services</a></li>
+          <li><a href="index.html#portfolio" class="nav-link" data-i18n="nav-realisations">Produits</a></li>
+          <li><a href="index.html#contact" class="nav-link" data-i18n="nav-contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-right-wrapper" style="display: flex; align-items: center; gap: 20px;">
+          <!-- Language Switcher -->
+          <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="fr">FR</button>
+            <span class="lang-divider">|</span>
+            <button class="lang-btn" data-lang="ar">AR</button>
+          </div>
+
+          <button class="theme-toggle" aria-label="Toggle dark mode">
+            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg class="icon-moon" style="display:none;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 0111.21 3 7 7 0 0012 21a9 9 0 009-8.21z"></path></svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PRODUCT DETAIL SECTION -->
+  <section class="product-detail-section">
+    <div class="container">
+      <a href="index.html#portfolio" class="back-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span id="back-text">Retour aux produits</span>
+      </a>
+
+      <div class="product-detail-grid">
+        <div class="product-image-container">
+          <img id="product-img" src="" alt="Image du produit" class="product-image">
+        </div>
+        <div class="product-info">
+          <span class="product-price" id="product-price">Prix DA</span>
+          <h1 class="product-title" id="product-title">Titre du produit</h1>
+          <p class="product-desc" id="product-desc">
+            Ce produit éducatif de KIRMIZI est conçu avec soin pour offrir la meilleure expérience. 
+            Idéal pour l'organisation et l'apprentissage, il fait partie de notre collection exclusive.
+          </p>
+          <a href="index.html#contact" class="btn btn-primary" style="margin-top: 20px;">Commander ce produit</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <p data-i18n="footer-copyright">&copy; 2026 KIRMIZI. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Get URL parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const img = urlParams.get('img');
+      const title = urlParams.get('title');
+      const price = urlParams.get('price');
+
+      // Populate details
+      if(img) document.getElementById('product-img').src = img;
+      if(title) {
+        document.getElementById('product-title').textContent = title;
+        document.title = "KIRMIZI | " + title;
+      }
+      if(price) document.getElementById('product-price').textContent = price;
+      
+      // Update back text based on language
+      const lang = localStorage.getItem('prodesign_lang') || 'fr';
+      if(lang === 'ar') {
+        document.getElementById('back-text').textContent = 'العودة إلى المنتجات';
+        document.querySelector('.btn-primary').textContent = 'طلب هذا المنتج';
+        document.getElementById('product-desc').textContent = 'تم تصميم هذا المنتج التعليمي من قرمزي بعناية لتقديم أفضل تجربة. مثالي للتنظيم والتعلم، وهو جزء من مجموعتنا الحصرية.';
+        document.querySelector('.back-link svg').style.transform = 'scaleX(-1)';
+      }
+    });
+  </script>
+</body>
+</html>
