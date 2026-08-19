@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const key = el.getAttribute('data-i18n');
       if (translations[lang] && translations[lang][key]) {
         // Use innerHTML for titles/headings containing span/br tags
-        if (key === 'hero-title' || key === 'services-title' || key === 'portfolio-title' || key === 'contact-heading') {
+        if (key === 'hero-title' || key === 'services-title' || key === 'portfolio-title' || key === 'contact-heading' || key === 'footer-copyright') {
           el.innerHTML = translations[lang][key];
         } else {
           el.textContent = translations[lang][key];

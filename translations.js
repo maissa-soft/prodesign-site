@@ -83,7 +83,7 @@ const translations = {
     "footer-contact-title": "Contact",
     "footer-legal": "Mentions Légales",
     "footer-privacy": "Politique de Confidentialité",
-    "footer-copyright": "&copy; 2026 KIRMIZI. Tous droits réservés.",
+    "footer-copyright": "© 2026 KIRMIZI. Tous droits réservés.",
 
     // Modals & Dynamic Alerts
     "modal-close": "Fermer",
@@ -177,7 +177,7 @@ const translations = {
     "footer-contact-title": "الاتصال",
     "footer-legal": "تنبيهات قانونية",
     "footer-privacy": "سياسة الخصوصية",
-    "footer-copyright": "&copy; 2026 KIRMIZI. جميع الحقوق محفوظة.",
+    "footer-copyright": "© 2026 KIRMIZI. جميع الحقوق محفوظة.",
 
     // Modals & Dynamic Alerts
     "modal-close": "إغلاق",
