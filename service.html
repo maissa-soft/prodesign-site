@@ -272,8 +272,8 @@
       </a>
 
       <div id="serviceHeader">
-        <span class="service-badge" id="serviceBadge">Service</span>
-        <h1 class="service-detail-title" id="serviceTitle">Titre du service</h1>
+        <span class="service-badge" id="serviceBadge">...</span>
+        <h1 class="service-detail-title" id="serviceTitle"></h1>
       </div>
 
       <div class="service-detail-box">
@@ -305,9 +305,9 @@
       </div>
 
       <div style="text-align: center; margin-top: 40px;">
-        <a href="index.html#portfolio" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 8px;">
+        <a href="index.html#portfolio" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; font-size: 1rem;">
           <span data-i18n="btn-more-products">Voir tous les produits</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
       </div>
     </div>
@@ -324,9 +324,9 @@
       </div>
 
       <div style="text-align: center; margin-top: 40px;">
-        <a href="index.html#avis" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 8px;">
+        <a href="index.html#avis" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; font-size: 1rem;">
           <span data-i18n="btn-more-reviews">Voir tous les avis clients</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
       </div>
     </div>
@@ -476,12 +476,14 @@
         ]
       };
 
-      const lang = localStorage.getItem('kirmizi_lang') || 'fr';
-      const data = serviceDetails && serviceDetails[lang] && serviceDetails[lang][serviceId]
-        ? serviceDetails[lang][serviceId]
-        : (serviceDetails ? serviceDetails['fr'][serviceId] : null);
+      const lang = localStorage.getItem('prodesign_lang') || localStorage.getItem('kirmizi_lang') || 'fr';
+      const details = (window.serviceDetails || typeof serviceDetails !== 'undefined' ? serviceDetails : null);
+      const data = details && details[lang] && details[lang][serviceId]
+        ? details[lang][serviceId]
+        : (details && details['fr'] ? details['fr'][serviceId] : null);
 
       if (data) {
+        document.title = `KIRMIZI | ${data.title}`;
         document.getElementById('serviceBadge').textContent = data.badge;
         document.getElementById('serviceBadge').style.backgroundColor = data.color || 'var(--gold-primary)';
         document.getElementById('serviceTitle').textContent = data.title;

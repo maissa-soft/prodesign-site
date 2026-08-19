@@ -1,3 +1,71 @@
+// --- GLOBAL SERVICE DETAILS ---
+window.serviceDetails = {
+  fr: {
+    cartesNotebooks: {
+      badge: "Identité & Papeterie",
+      title: "Cartes de Visite & Notebooks Personnalisés",
+      color: "var(--gold-primary)",
+      body: `
+        <p>Valorisez l'image de votre entreprise ou organisez votre quotidien avec nos créations graphiques sur mesure pour cartes de visite et cahiers d'apprentissage ou de travail.</p>
+        <p>Du design minimaliste et élégant aux conceptions les plus créatives, nous déclinons votre identité visuelle sur tous vos supports physiques.</p>
+        <ul>
+          <li>Design original et sur mesure de cartes de visite (recto/verso, haute résolution).</li>
+          <li>Conception graphique de couvertures de notebooks et carnets personnalisés.</li>
+          <li>Mise en page des contenus intérieurs (grilles de notes, agendas, suivis).</li>
+          <li>Fichiers haute définition prêts pour l'impression (300 DPI, repères de coupe).</li>
+        </ul>
+      `
+    },
+    pptMemoires: {
+      badge: "Présentation & Rédaction",
+      title: "Présentations PowerPoint, Mémoires & Rapports",
+      color: "var(--navy-primary)",
+      body: `
+        <p>Faites bonne impression lors de vos soutenances, réunions professionnelles ou remises de diplômes grâce à des documents et présentations d'une qualité irréprochable.</p>
+        <p>Nous combinons la puissance visuelle des diaporamas modernes à la rigueur méthodologique des mises en page académiques et corporatives.</p>
+        <ul>
+          <li>Création de présentations PowerPoint interactives, modernes et sur mesure.</li>
+          <li>Mise en page automatique avancée de mémoires, thèses et rapports de stage.</li>
+          <li>Mise en conformité avec les guides méthodologiques universitaires ou d'entreprise.</li>
+          <li>Création et intégration d'infographies, de schémas et de graphiques personnalisés.</li>
+        </ul>
+      `
+    }
+  },
+  ar: {
+    cartesNotebooks: {
+      badge: "الهوية والمطبوعات",
+      title: "بطاقات العمل ودفاتر الملاحظات المخصصة",
+      color: "var(--gold-primary)",
+      body: `
+        <p>عزز صورة عملك أو نظم يومك مع تصاميمنا المخصصة لبطاقات العمل ودفاتر التعلم والعمل.</p>
+        <p>من التصاميم البسيطة والأنيقة إلى الأكثر إبداعًا، نطبق هويتك البصرية على جميع مطبوعاتك.</p>
+        <ul>
+          <li>تصميم أصلي ومخصص لبطاقات العمل (الوجهين، دقة عالية).</li>
+          <li>تصميم رسومي لأغلفة الدفاتر والمذكرات المخصصة.</li>
+          <li>تنسيق الصفحات الداخلية (جداول، مفكرات، متابعة).</li>
+          <li>تسليم ملفات جاهزة للطباعة عالية الدقة.</li>
+        </ul>
+      `
+    },
+    pptMemoires: {
+      badge: "العروض والتنسيق",
+      title: "عروض باوربوينت، الأطروحات والتقارير",
+      color: "var(--navy-primary)",
+      body: `
+        <p>اترك انطباعًا رائعًا خلال مناقشاتك أو اجتماعاتك مع مستندات وعروض عالية الجودة.</p>
+        <p>نجمع بين الجاذبية البصرية للعروض التقديمية الحديثة والدقة المنهجية لتنسيق الأطروحات والتقارير.</p>
+        <ul>
+          <li>إنشاء عروض باوربوينت تفاعلية وعصرية ومخصصة.</li>
+          <li>تنسيق احترافي كامل للأطروحات وتقارير التدريب.</li>
+          <li>الالتزام التام بالمعايير المنهجية الأكاديمية والمهنية.</li>
+          <li>إنشاء وتنسيق المخططات والرسوم البيانية.</li>
+        </ul>
+      `
+    }
+  }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // --- DARK MODE TOGGLE ---
@@ -52,12 +120,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Translate standard text contents
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
-      if (translations[lang] && translations[lang][key]) {
-        // Use innerHTML for titles/headings containing span/br tags
-        if (key === 'hero-title' || key === 'services-title' || key === 'portfolio-title' || key === 'contact-heading' || key === 'footer-copyright') {
-          el.innerHTML = translations[lang][key];
+      if (typeof translations !== 'undefined' && translations[lang] && translations[lang][key]) {
+        const val = translations[lang][key];
+        if (val.includes('<') && val.includes('>')) {
+          el.innerHTML = val;
         } else {
-          el.textContent = translations[lang][key];
+          el.textContent = val;
         }
       }
     });
@@ -65,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Translate placeholders
     document.querySelectorAll('[data-i18n-ph]').forEach(el => {
       const key = el.getAttribute('data-i18n-ph');
-      if (translations[lang] && translations[lang][key]) {
+      if (typeof translations !== 'undefined' && translations[lang] && translations[lang][key]) {
         el.placeholder = translations[lang][key];
       }
     });
@@ -81,39 +149,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- STICKY HEADER EFFECT ---
   const header = document.getElementById('header');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 20) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  });
+  if (header) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  }
 
   // --- MOBILE NAVIGATION TOGGLE ---
   const menuToggle = document.getElementById('menu-toggle');
   const navMenu = document.getElementById('nav-menu');
   const navLinks = document.querySelectorAll('.nav-link');
 
-  menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('active');
-    navMenu.classList.toggle('active');
-  });
-
-  // Close mobile menu when clicking a link
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      menuToggle.classList.remove('active');
-      navMenu.classList.remove('active');
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
     });
-  });
 
-  // Close mobile menu when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!navMenu.contains(e.target) && !menuToggle.contains(e.target) && navMenu.classList.contains('active')) {
-      menuToggle.classList.remove('active');
-      navMenu.classList.remove('active');
-    }
-  });
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !menuToggle.contains(e.target) && navMenu.classList.contains('active')) {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+  }
 
   // --- PORTFOLIO FILTER SYSTEM ---
   const filterButtons = document.querySelectorAll('.filter-btn');
@@ -121,7 +191,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-      // Toggle active class on buttons
       filterButtons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
@@ -130,10 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
       portfolioItems.forEach(item => {
         const itemCategory = item.getAttribute('data-category');
         
-        if (filterValue === 'all') {
-          item.style.display = 'block';
-          setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'scale(1)'; }, 10);
-        } else if (itemCategory === filterValue) {
+        if (filterValue === 'all' || itemCategory === filterValue) {
           item.style.display = 'block';
           setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'scale(1)'; }, 10);
         } else {
@@ -145,115 +211,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- SERVICE DETAILS & DYNAMIC MODALS ---
-  const serviceDetails = {
-    fr: {
-      cartesNotebooks: {
-        badge: "Identité & Papeterie",
-        title: "Cartes de Visite & Notebooks Personnalisés",
-        color: "var(--gold-primary)",
-        body: `
-          <p>Valorisez l'image de votre entreprise ou organisez votre quotidien avec nos créations graphiques sur mesure pour cartes de visite et cahiers d'apprentissage ou de travail.</p>
-          <p>Du design minimaliste et élégant aux conceptions les plus créatives, nous déclinons votre identité visuelle sur tous vos supports physiques.</p>
-          <ul>
-            <li>Design original et sur mesure de cartes de visite (recto/verso, haute résolution).</li>
-            <li>Conception graphique de couvertures de notebooks et carnets personnalisés.</li>
-            <li>Mise en page des contenus intérieurs (grilles de notes, agendas, suivis).</li>
-            <li>Fichiers haute définition prêts pour l'impression (300 DPI, repères de coupe).</li>
-          </ul>
-        `
-      },
-      pptMemoires: {
-        badge: "Présentation & Rédaction",
-        title: "Présentations PowerPoint, Mémoires & Rapports",
-        color: "var(--navy-primary)",
-        body: `
-          <p>Faites bonne impression lors de vos soutenances, réunions professionnelles ou remises de diplômes grâce à des documents et présentations d'une qualité irréprochable.</p>
-          <p>Nous combinons la puissance visuelle des diaporamas modernes à la rigueur méthodologique des mises en page académiques et corporatives.</p>
-          <ul>
-            <li>Création de présentations PowerPoint interactives, modernes et sur mesure.</li>
-            <li>Mise en page automatique avancée de mémoires, thèses et rapports de stage.</li>
-            <li>Mise en conformité avec les guides méthodologiques universitaires ou d'entreprise.</li>
-            <li>Création et intégration d'infographies, de schémas et de graphiques personnalisés.</li>
-          </ul>
-        `
-      }
-    },
-    ar: {
-      cartesNotebooks: {
-        badge: "الهوية والمطبوعات",
-        title: "بطاقات العمل ودفاتر الملاحظات المخصصة",
-        color: "var(--gold-primary)",
-        body: `
-          <p>عزز صورة عملك أو نظم يومك مع تصاميمنا المخصصة لبطاقات العمل ودفاتر التعلم والعمل.</p>
-          <p>من التصاميم البسيطة والأنيقة إلى الأكثر إبداعًا، نطبق هويتك البصرية على جميع مطبوعاتك.</p>
-          <ul>
-            <li>تصميم أصلي ومخصص لبطاقات العمل (الوجهين، دقة عالية).</li>
-            <li>تصميم رسومي لأغلفة الدفاتر والمذكرات المخصصة.</li>
-            <li>تنسيق الصفحات الداخلية (جداول، مفكرات، متابعة).</li>
-            <li>تسليم ملفات جاهزة للطباعة عالية الدقة.</li>
-          </ul>
-        `
-      },
-      pptMemoires: {
-        badge: "العروض والتنسيق",
-        title: "عروض باوربوينت، الأطروحات والتقارير",
-        color: "var(--navy-primary)",
-        body: `
-          <p>اترك انطباعًا رائعًا خلال مناقشاتك أو اجتماعاتك مع مستندات وعروض عالية الجودة.</p>
-          <p>نجمع بين الجاذبية البصرية للعروض التقديمية الحديثة والدقة المنهجية لتنسيق الأطروحات والتقارير.</p>
-          <ul>
-            <li>إنشاء عروض باوربوينت تفاعلية وعصرية ومخصصة.</li>
-            <li>تنسيق احترافي كامل للأطروحات وتقارير التدريب.</li>
-            <li>الالتزام التام بالمعايير المنهجية الأكاديمية والمهنية.</li>
-            <li>إنشاء وتنسيق المخططات والرسوم البيانية.</li>
-          </ul>
-        `
-      }
-    }
-  };
-
-  const modalOverlay = document.getElementById('serviceModal');
-  const modalClose = document.getElementById('modalClose');
-  const modalBtnClose = document.getElementById('modalBtnClose');
-  const modalBtnContact = document.getElementById('modalBtnContact');
-  const modalTitle = document.getElementById('modalTitle');
-  const modalBadge = document.getElementById('modalBadge');
-  const modalBody = document.getElementById('modalBody');
+  // --- SERVICE CARDS CLICK -> OPEN DEDICATED SERVICE PAGE ---
   const serviceCards = document.querySelectorAll('.service-card');
-  const serviceSelect = document.getElementById('service');
-
-  let activeServiceKey = '';
-
-  // Open Modal function
-  const openModal = (serviceKey) => {
-    const data = serviceDetails[currentLang][serviceKey];
-    if (!data) return;
-
-    activeServiceKey = serviceKey;
-    
-    // Set content
-    modalTitle.textContent = data.title;
-    modalBadge.textContent = data.badge;
-    modalBadge.style.backgroundColor = data.color;
-    modalBody.innerHTML = data.body;
-    
-    // Open modal animation
-    modalOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden'; // prevent background scrolling
-  };
-
-  // Close Modal function
-  const closeModal = () => {
-    modalOverlay.classList.remove('active');
-    document.body.style.overflow = '';
-  };
-
-  // Add click events to cards
   serviceCards.forEach(card => {
-    card.addEventListener('click', () => {
+    card.addEventListener('click', (e) => {
       const serviceKey = card.getAttribute('data-service');
-      openModal(serviceKey);
+      if (serviceKey) {
+        window.open(`service.html?id=${serviceKey}`, '_blank');
+      }
     });
   });
 
