@@ -91,7 +91,14 @@ const translations = {
     "success-title": "Merci pour votre message !",
     "success-desc": "Votre demande a bien été envoyée. Notre équipe commerciale étudiera votre projet et prendra contact avec vous sous 24 heures.",
     "btn-reset": "Envoyer une autre demande",
-    "sending": "Envoi en cours..."
+    "sending": "Envoi en cours...",
+
+    // Testimonials / Avis Clients
+    "reviews-title": "Avis <span>Clients</span>",
+    "reviews-subtitle": "Découvrez les retours et messages de nos clients satisfaits par nos services et créations.",
+    "reviews-service-title": "Avis & Retours Clients pour ce Service",
+    "reviews-zoom": "Cliquer pour agrandir",
+    "btn-back-services": "Retour aux services"
   },
   ar: {
     // Navigation
@@ -185,6 +192,13 @@ const translations = {
     "success-title": "شكرًا لرسالتك!",
     "success-desc": "تم إرسال طلبك بنجاح. سيقوم فريقنا التجاري بدراسة مشروعك والتواصل معك في غضون 24 ساعة.",
     "btn-reset": "إرسال طلب آخر",
-    "sending": "جاري الإرسال..."
+    "sending": "جاري الإرسال...",
+
+    // Testimonials / Avis Clients
+    "reviews-title": "آراء <span>العملاء</span>",
+    "reviews-subtitle": "اكتشف تقييمات ورسائل عملائنا السعداء بخدماتنا وإبداعاتنا.",
+    "reviews-service-title": "آراء وتقييمات العملاء لهذه الخدمة",
+    "reviews-zoom": "انقر لتكبير الصورة",
+    "btn-back-services": "العودة إلى الخدمات"
   }
 };

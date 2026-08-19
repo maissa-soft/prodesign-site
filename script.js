@@ -423,3 +423,31 @@ document.addEventListener('DOMContentLoaded', () => {
   updateLanguage(currentLang);
 
 });
+
+// Global Lightbox Handler for Homepage Avis Clients
+function openHomeLightbox(src) {
+  const modal = document.getElementById('homeLightboxModal');
+  const img = document.getElementById('homeLightboxImg');
+  if (modal && img) {
+    img.src = src;
+    modal.classList.add('active');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const homeModal = document.getElementById('homeLightboxModal');
+  const homeClose = document.getElementById('homeLightboxClose');
+
+  if (homeClose && homeModal) {
+    homeClose.addEventListener('click', () => {
+      homeModal.classList.remove('active');
+    });
+
+    homeModal.addEventListener('click', (e) => {
+      if (e.target === homeModal) {
+        homeModal.classList.remove('active');
+      }
+    });
+  }
+});
+

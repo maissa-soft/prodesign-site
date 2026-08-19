@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KIRMIZI - Détails du service et avis des clients.">
+  <title>KIRMIZI | Détails du Service</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo-symbol.svg">
+  <style>
+    .service-hero-section {
+      padding-top: 140px;
+      padding-bottom: 60px;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.03) 0%, rgba(204, 164, 59, 0.05) 100%);
+    }
+
+    body.dark-mode .service-hero-section {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(204, 164, 59, 0.08) 100%);
+    }
+
+    .service-badge {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .service-detail-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--navy-primary);
+    }
+
+    body.dark-mode .service-detail-title {
+      color: var(--text-white);
+    }
+
+    .service-detail-box {
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 50px;
+    }
+
+    body.dark-mode .service-detail-box {
+      background: var(--navy-dark);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .service-features-list {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .service-features-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1rem;
+      color: var(--text-dark);
+    }
+
+    body.dark-mode .service-features-list li {
+      color: var(--text-light);
+    }
+
+    .service-features-list li svg {
+      color: var(--gold-primary);
+      flex-shrink: 0;
+    }
+
+    /* Avis Clients Grid for Service Page */
+    .reviews-section {
+      padding: 60px 0;
+      background-color: rgba(248, 250, 252, 0.5);
+    }
+
+    body.dark-mode .reviews-section {
+      background-color: rgba(15, 23, 42, 0.4);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .review-card {
+      background: var(--bg-white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      transition: var(--transition-smooth);
+      cursor: pointer;
+      position: relative;
+    }
+
+    body.dark-mode .review-card {
+      background: var(--navy-primary);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .review-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .review-card img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+
+    .review-card-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent);
+      padding: 20px 16px 12px 16px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .review-card-overlay span {
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    /* Lightbox Modal */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(8px);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .lightbox-modal.active {
+      display: flex;
+    }
+
+    .lightbox-img {
+      max-width: 90%;
+      max-height: 85vh;
+      border-radius: var(--radius-md);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      object-fit: contain;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: white;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .lightbox-close:hover {
+      background: var(--gold-primary);
+      color: var(--navy-primary);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- --- HEADER --- -->
+  <header id="header" class="scrolled">
+    <div class="container">
+      <nav class="nav-container">
+        <a href="index.html" class="logo-link" id="logo-nav">
+          <img src="assets/logo-kirmizi.png" alt="KIRMIZI Logo" class="header-logo">
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html#accueil" class="nav-link" data-i18n="nav-accueil">Accueil</a></li>
+          <li><a href="index.html#portfolio" class="nav-link" data-i18n="nav-realisations">Produits</a></li>
+          <li><a href="index.html#services" class="nav-link active" data-i18n="nav-services">Services</a></li>
+        </ul>
+
+        <div class="nav-right-wrapper">
+          <!-- Language Switcher -->
+          <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="fr">FR</button>
+            <span class="lang-divider">|</span>
+            <button class="lang-btn" data-lang="ar">AR</button>
+          </div>
+
+          <button class="theme-toggle" aria-label="Toggle dark mode">
+            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="icon-moon" style="display:none;" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 0012 21a9 9 0 009-8.21z"></path>
+            </svg>
+          </button>
+
+          <div class="nav-cta">
+            <a href="contact.html" class="btn btn-primary" id="btn-devis" data-i18n="btn-devis">Demander un devis</a>
+          </div>
+        </div>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- --- SERVICE HERO SECTION --- -->
+  <section class="service-hero-section">
+    <div class="container">
+      <a href="index.html#services" class="back-link" style="margin-bottom: 24px; display: inline-flex;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span data-i18n="btn-back-services">Retour aux services</span>
+      </a>
+
+      <div id="serviceHeader">
+        <span class="service-badge" id="serviceBadge">Service</span>
+        <h1 class="service-detail-title" id="serviceTitle">Titre du service</h1>
+      </div>
+
+      <div class="service-detail-box">
+        <div id="serviceBody" class="service-body-content">
+          <!-- Dynamic details content -->
+        </div>
+
+        <div style="margin-top: 36px; display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="https://wa.me/213657693945" target="_blank" class="btn btn-primary" id="btnWhatsappOrder">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.5 19.5 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>Commander via WhatsApp</span>
+          </a>
+          <a href="contact.html" class="btn btn-secondary">
+            <span data-i18n="btn-devis">Demander un devis</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- AVIS CLIENTS POUR CE SERVICE --- -->
+  <section class="reviews-section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="reviews-service-title">Avis & Retours Clients pour ce Service</h2>
+      <p class="section-subtitle" data-i18n="reviews-subtitle">Découvrez les retours et messages de nos clients satisfaits par nos services et créations.</p>
+
+      <div class="reviews-grid" id="serviceReviewsGrid">
+        <!-- Review Images populated via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <img src="" alt="Avis Client Grand Format" class="lightbox-img" id="lightboxImg">
+  </div>
+
+  <!-- --- FOOTER --- -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col-brand">
+          <img src="assets/logo-kirmizi.png" alt="KIRMIZI Logo" class="footer-logo">
+          <p class="footer-desc" data-i18n="footer-desc">
+            KIRMIZI est votre partenaire de confiance pour toutes vos créations digitales. Notre objectif est de
+            valoriser votre image de marque à travers des designs percutants et sur mesure.
+          </p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/kirmizi.papeterie" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/kirmizi.papeterie" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer-links-title">Liens Rapides</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#accueil" class="footer-link" data-i18n="nav-accueil">Accueil</a></li>
+            <li><a href="index.html#portfolio" class="footer-link" data-i18n="nav-realisations">Produits</a></li>
+            <li><a href="index.html#services" class="footer-link" data-i18n="nav-services">Services</a></li>
+            <li><a href="contact.html" class="footer-link" data-i18n="nav-contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer-contact-title">Contact</h4>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span data-i18n="contact-address-val">Constantine, Algérie</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>sekhri.isra@gmail.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.5 19.5 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span>0657693945</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer-copyright">© 2026 KIRMIZI. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const serviceId = urlParams.get('id') || 'cartesNotebooks';
+
+      // Reviews images mapping
+      const reviewsMap = {
+        cartesNotebooks: [
+          'assets/avis client/notebooks/Messenger_creation_06E2FD06-60DC-4F1C-856C-AC312C9F7A1F.jpeg',
+          'assets/avis client/notebooks/Messenger_creation_C6DA05B4-5CFB-4FEF-ACE3-E229B3ACBFA9.jpeg'
+        ],
+        pptMemoires: [
+          'assets/avis client/memoires et presentation/Messenger_creation_E2E1B324-1A52-4AE2-95EA-09642B015DC0.jpeg',
+          'assets/avis client/memoires et presentation/Screenshot_20260819_123353_com_hihonor_photos_SlotAlbumActivity_edit_305298606244682.jpg',
+          'assets/avis client/memoires et presentation/Screenshot_20260819_123949_com_instagram_android_TransparentModalActivity_edit_305379380269443.jpg'
+        ]
+      };
+
+      const lang = localStorage.getItem('kirmizi_lang') || 'fr';
+      const data = serviceDetails && serviceDetails[lang] && serviceDetails[lang][serviceId]
+        ? serviceDetails[lang][serviceId]
+        : (serviceDetails ? serviceDetails['fr'][serviceId] : null);
+
+      if (data) {
+        document.getElementById('serviceBadge').textContent = data.badge;
+        document.getElementById('serviceBadge').style.backgroundColor = data.color || 'var(--gold-primary)';
+        document.getElementById('serviceTitle').textContent = data.title;
+        document.getElementById('serviceBody').innerHTML = data.body;
+      }
+
+      // Render reviews grid
+      const grid = document.getElementById('serviceReviewsGrid');
+      const images = reviewsMap[serviceId] || [];
+      
+      grid.innerHTML = images.map((imgSrc, index) => `
+        <div class="review-card" onclick="openLightbox('${imgSrc}')">
+          <img src="${imgSrc}" alt="Avis Client ${index + 1}">
+          <div class="review-card-overlay">
+            <span>Avis Client #${index + 1}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+          </div>
+        </div>
+      `).join('');
+
+      // WhatsApp Button text prefill
+      const btnWhatsapp = document.getElementById('btnWhatsappOrder');
+      if (btnWhatsapp && data) {
+        const message = encodeURIComponent(`Bonjour KIRMIZI, je souhaite commander le service : ${data.title}`);
+        btnWhatsapp.href = `https://wa.me/213657693945?text=${message}`;
+      }
+    });
+
+    // Lightbox handlers
+    const lightboxModal = document.getElementById('lightboxModal');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    function openLightbox(src) {
+      lightboxImg.src = src;
+      lightboxModal.classList.add('active');
+    }
+
+    if (lightboxClose) {
+      lightboxClose.addEventListener('click', () => {
+        lightboxModal.classList.remove('active');
+      });
+    }
+
+    if (lightboxModal) {
+      lightboxModal.addEventListener('click', (e) => {
+        if (e.target === lightboxModal) {
+          lightboxModal.classList.remove('active');
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
