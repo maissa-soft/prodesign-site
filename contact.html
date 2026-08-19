@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="KIRMIZI - Contactez-nous pour toute demande de devis ou information sur nos créations digitales et papeterie éducative.">
+  <title>KIRMIZI | Contact & Demande de Devis</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo-symbol.svg">
+  <style>
+    .contact-page-padding {
+      padding-top: 140px;
+      padding-bottom: 100px;
+      min-height: 80vh;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- --- HEADER / NAVIGATION --- -->
+  <header id="header">
+    <div class="container">
+      <nav class="nav-container">
+        <a href="index.html" class="logo-link" id="logo-nav">
+          <img src="assets/logo-kirmizi.png" alt="KIRMIZI Logo" class="header-logo">
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html#accueil" class="nav-link" data-i18n="nav-accueil">Accueil</a></li>
+          <li><a href="index.html#portfolio" class="nav-link" data-i18n="nav-realisations">Produits</a></li>
+          <li><a href="index.html#services" class="nav-link" data-i18n="nav-services">Services</a></li>
+        </ul>
+
+        <div class="nav-right-wrapper">
+          <!-- Language Switcher -->
+          <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="fr">FR</button>
+            <span class="lang-divider">|</span>
+            <button class="lang-btn" data-lang="ar">AR</button>
+          </div>
+
+          <button class="theme-toggle" aria-label="Toggle dark mode">
+            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="icon-moon" style="display:none;" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 0012 21a9 9 0 009-8.21z"></path>
+            </svg>
+          </button>
+
+          <div class="nav-cta">
+            <a href="contact.html" class="btn btn-primary" id="btn-devis" data-i18n="btn-devis">Demander un devis</a>
+          </div>
+        </div>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- --- DEDICATED CONTACT SECTION --- -->
+  <section class="contact contact-page-padding" id="contact">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <span class="contact-lead" data-i18n="contact-lead">Parlons de votre projet</span>
+          <h2 class="contact-heading" data-i18n="contact-heading">CONTACTEZ-NOUS <br>pour donner vie à vos idées !</h2>
+          <p class="contact-desc" data-i18n="contact-desc">
+            Vous avez un besoin spécifique ou vous souhaitez en savoir plus sur l'un de nos services ? Remplissez le
+            formulaire, nous vous répondrons sous 24 heures pour évaluer votre projet ensemble.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-detail-text">
+                <h4 data-i18n="contact-email-label">E-mail professionnel</h4>
+                <p>sekhri.isra@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.5 19.5 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+              </div>
+              <div class="contact-detail-text">
+                <h4 data-i18n="contact-phone-label">Téléphone / WhatsApp</h4>
+                <p>0657693945</p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="contact-detail-text">
+                <h4 data-i18n="contact-address-label">Siège Social</h4>
+                <p data-i18n="contact-address-val">Constantine, Algérie</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-container">
+          <!-- FormSubmit integration to sekhri.isra@gmail.com -->
+          <form id="contactForm" action="https://formsubmit.co/sekhri.isra@gmail.com" method="POST">
+            <!-- FormSubmit Configurations -->
+            <input type="hidden" name="_subject" value="Nouveau Projet Client - KIRMIZI">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+
+            <div class="form-group">
+              <label for="name" class="form-label" data-i18n="form-name-lbl">Nom complet *</label>
+              <input type="text" id="name" name="name" class="form-input" data-i18n-ph="form-name-ph"
+                placeholder="Votre nom complet" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label" data-i18n="form-email-lbl">Adresse e-mail *</label>
+              <input type="email" id="email" name="email" class="form-input" data-i18n-ph="form-email-ph"
+                placeholder="exemple@domaine.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="service" class="form-label" data-i18n="form-service-lbl">Service demandé *</label>
+              <select id="service" name="service" class="form-select" required>
+                <option value="" disabled selected data-i18n="form-service-select">Sélectionnez un service</option>
+                <option value="cartesNotebooks" data-i18n="form-opt-cartes-notebooks">Cartes de visite & Notebooks</option>
+                <option value="pptMemoires" data-i18n="form-opt-ppt-memoires">Présentations PowerPoint, Mémoires & Rapports</option>
+                <option value="autre" data-i18n="form-opt-other">Autre Projet Digital</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label" data-i18n="form-msg-lbl">Description du projet *</label>
+              <textarea id="message" name="message" class="form-textarea" data-i18n-ph="form-msg-ph"
+                placeholder="Décrivez votre besoin en quelques lignes..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="btn-send-icon">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+              <span data-i18n="btn-submit">Envoyer ma demande</span>
+            </button>
+          </form>
+
+          <!-- Success Message Container -->
+          <div class="success-message" id="successMessage"
+            style="display: none; text-align: center; padding: 40px 20px; color: var(--text-white);">
+            <div
+              style="width: 80px; height: 80px; border-radius: 50%; background-color: rgba(204, 164, 59, 0.1); border: 2px solid var(--gold-primary); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px auto;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                stroke="var(--gold-primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <h3 data-i18n="success-title"
+              style="font-family: 'Outfit', sans-serif; font-size: 1.8rem; margin-bottom: 12px; color: var(--gold-primary);">
+              Merci pour votre message !</h3>
+            <p data-i18n="success-desc"
+              style="color: var(--text-light); margin-bottom: 30px; font-size: 1rem; max-width: 400px; margin-left: auto; margin-right: auto;">
+              Votre demande a bien été envoyée. Notre équipe commerciale étudiera votre projet et prendra contact avec
+              vous sous 24 heures.
+            </p>
+            <button id="resetFormBtn" class="btn btn-outline-white" data-i18n="btn-reset">Envoyer une autre
+              demande</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- FOOTER --- -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col-brand">
+          <img src="assets/logo-kirmizi.png" alt="KIRMIZI Logo" class="footer-logo">
+          <p class="footer-desc" data-i18n="footer-desc">
+            KIRMIZI est votre partenaire de confiance pour toutes vos créations digitales. Notre objectif est de
+            valoriser votre image de marque à travers des designs percutants et sur mesure.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer-links-title">Liens Rapides</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#accueil" class="footer-link" data-i18n="nav-accueil">Accueil</a></li>
+            <li><a href="index.html#portfolio" class="footer-link" data-i18n="nav-realisations">Produits</a></li>
+            <li><a href="index.html#services" class="footer-link" data-i18n="nav-services">Services</a></li>
+            <li><a href="contact.html" class="footer-link" data-i18n="nav-contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer-contact-title">Contact</h4>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span data-i18n="contact-address-val">Constantine, Algérie</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>sekhri.isra@gmail.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.5 19.5 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span>0657693945</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer-copyright">© 2026 KIRMIZI. Tous droits réservés.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link" data-i18n="footer-legal">Mentions Légales</a>
+          <a href="#" class="footer-bottom-link" data-i18n="footer-privacy">Politique de Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
