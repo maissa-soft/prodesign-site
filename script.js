@@ -365,21 +365,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- PRODUCT CLICK REDIRECTION ---
+  // --- PRODUCT CLICK LIGHTBOX ---
   const productItems = document.querySelectorAll('.portfolio-item');
   productItems.forEach(item => {
     item.addEventListener('click', () => {
       const imgEl = item.querySelector('.portfolio-img');
-      const titleEl = item.querySelector('.portfolio-title');
-      const priceEl = item.querySelector('.portfolio-category');
-      
-      if (imgEl && titleEl && priceEl) {
+      if (imgEl) {
         const img = imgEl.getAttribute('src');
-        const title = titleEl.textContent;
-        const price = priceEl.textContent;
-        
-        const url = `product.html?img=${encodeURIComponent(img)}&title=${encodeURIComponent(title)}&price=${encodeURIComponent(price)}`;
-        window.location.href = url;
+        openHomeLightbox(img);
       }
     });
   });
