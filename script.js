@@ -148,165 +148,65 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- SERVICE DETAILS & DYNAMIC MODALS ---
   const serviceDetails = {
     fr: {
-      powerpoint: {
-        badge: "Design & Présentation",
-        title: "Présentations PowerPoint Professionnelles",
-        color: "var(--color-powerpoint)",
+      cartesNotebooks: {
+        badge: "Identité & Papeterie",
+        title: "Cartes de Visite & Notebooks Personnalisés",
+        color: "var(--gold-primary)",
         body: `
-          <p>Vos idées méritent d'être présentées sous leur meilleur jour. Que ce soit pour une soutenance de mémoire, un pitch devant des investisseurs, une réunion commerciale importante ou une conférence, nous concevons des présentations PowerPoint haut de gamme, claires, structurées et visuellement percutantes.</p>
-          <p>Notre approche s'appuie sur une charte visuelle personnalisée, le respect de votre identité visuelle et la simplification de vos messages pour un impact maximum.</p>
+          <p>Valorisez l'image de votre entreprise ou organisez votre quotidien avec nos créations graphiques sur mesure pour cartes de visite et cahiers d'apprentissage ou de travail.</p>
+          <p>Du design minimaliste et élégant aux conceptions les plus créatives, nous déclinons votre identité visuelle sur tous vos supports physiques.</p>
           <ul>
-            <li>Structuration logique du contenu et rédaction de messages clés.</li>
-            <li>Design graphique unique et sur mesure (aucun template générique).</li>
-            <li>Intégration d'infographies, d'illustrations et de schémas explicatifs.</li>
-            <li>Animations subtiles et transitions professionnelles et fluides.</li>
-            <li>Fichiers livrés au format modifiable (.pptx) et en PDF de haute qualité.</li>
+            <li>Design original et sur mesure de cartes de visite (recto/verso, haute résolution).</li>
+            <li>Conception graphique de couvertures de notebooks et carnets personnalisés.</li>
+            <li>Mise en page des contenus intérieurs (grilles de notes, agendas, suivis).</li>
+            <li>Fichiers haute définition prêts pour l'impression (300 DPI, repères de coupe).</li>
           </ul>
         `
       },
-      memoires: {
-        badge: "Mise en page académique & pro",
-        title: "Mise en page de Mémoires & Rapports",
-        color: "var(--color-memoires)",
+      pptMemoires: {
+        badge: "Présentation & Rédaction",
+        title: "Présentations PowerPoint, Mémoires & Rapports",
+        color: "var(--navy-primary)",
         body: `
-          <p>Un document académique ou professionnel de qualité doit refléter la rigueur de son contenu à travers une structure impeccable. Nous prenons en charge la mise en page et la mise en conformité de vos mémoires de fin d'études, thèses de doctorat, rapports de stage, livres blancs ou bilans d'activité.</p>
-          <p>We veillent au respect méticuleux des guides méthodologiques imposés par votre université ou de la charte éditoriale de votre entreprise.</p>
+          <p>Faites bonne impression lors de vos soutenances, réunions professionnelles ou remises de diplômes grâce à des documents et présentations d'une qualité irréprochable.</p>
+          <p>Nous combinons la puissance visuelle des diaporamas modernes à la rigueur méthodologique des mises en page académiques et corporatives.</p>
           <ul>
-            <li>Mise en page automatique avancée (marges, en-têtes, pieds de page).</li>
-            <li>Création automatisée de la table des matières, de la table des illustrations et de la bibliographie.</li>
-            <li>Uniformisation typographique (polices, interlignes, espacements, citations).</li>
-            <li>Traitement et amélioration graphique des tableaux, courbes et schémas.</li>
-            <li>Livraison de fichiers PDF prêts pour l'impression et de fichiers sources (.docx).</li>
-          </ul>
-        `
-      },
-      cartes: {
-        badge: "Identité / Print",
-        title: "Cartes de Visite Haut de Gamme",
-        color: "var(--color-cartes)",
-        body: `
-          <p>Votre carte de visite est le premier support physique que vous laissez à un contact. Elle doit transmettre instantanément le sérieux et le positionnement de votre activité. Nous concevons des cartes de visite sur mesure qui marquent les esprits et reflètent parfaitement votre logo et vos valeurs.</p>
-          <p>Du design minimaliste et élégant aux conceptions graphiques les plus audacieuses, nous adaptons le style à votre secteur d'activité.</p>
-          <ul>
-            <li>Design original et personnalisé recto/verso selon vos directives.</li>
-            <li>Harmonisation des couleurs avec votre logo et identité visuelle existante.</li>
-            <li>Fichiers haute définition livrés prêts pour l'imprimeur (CMJN, 300 DPI, repères de coupe).</li>
-            <li>Conseils d'expert sur le choix des papiers (mat, brillant, soft-touch) et des finitions (dorure, vernis sélectif).</li>
-            <li>Déclinaison possible pour plusieurs collaborateurs.</li>
-          </ul>
-        `
-      },
-      notebooks: {
-        badge: "Merchandising / Cadeaux",
-        title: "Notebooks & Cahiers Personnalisés",
-        color: "var(--color-notebooks)",
-        body: `
-          <p>Qu'il s'agisse d'un outil de travail pour vos équipes, d'un cadeau d'entreprise pour vos clients ou de carnets à commercialiser, le notebook personnalisé est un formidable vecteur de communication. Nous concevons le design extérieur de la couverture et la grille intérieure de vos carnets de notes selon vos envies.</p>
-          <p>Nous créons des couvertures thématiques artistiques et professionnelles intégrant vos logos, slogans et éléments graphiques de marque.</p>
-          <ul>
-            <li>Création graphique de la couverture (plats recto/verso et tranche).</li>
-            <li>Conception sur mesure des pages intérieures (grille pointillée, lignée, blanche ou agenda).</li>
-            <li>Intégration d'éléments spécifiques de marque (histoire de l'entreprise, pages de présentation).</li>
-            <li>Fichiers de mise en page haute définition configurés selon le gabarit de l'imprimeur de votre choix.</li>
-            <li>Adapté à tous formats (A5, A4, carré) et types de reliures (spirales, cousue).</li>
-          </ul>
-        `
-      },
-      sitesweb: {
-        badge: "Présence Web / Digital",
-        title: "Création de Sites Web Vitrines",
-        color: "var(--color-sitesweb)",
-        body: `
-          <p>Un site internet professionnel est la clé de votre crédibilité et votre meilleur commercial, actif 24h/24. Nous concevons et développons des sites web vitrines modernes, rapides, fluides et optimisés pour convertir vos visiteurs en clients qualifiés.</p>
-          <p>Tous nos sites sont développés avec une approche axée sur les performances d'affichage, la sécurité et la visibilité sur les moteurs de recherche.</p>
-          <ul>
-            <li>Design unique et moderne adapté à tous les écrans (100% Responsive & Mobile First).</li>
-            <li>Architecture optimisée pour le référencement naturel (SEO ready).</li>
-            <li>Intégrations interactives (formulaires de contact, galeries de photos, liens réseaux sociaux).</li>
-            <li>Vitesse de chargement optimale (compression d'images, code léger).</li>
-            <li>Accompagnement pour l'achat de nom de domaine, la configuration de l'hébergement et la mise en ligne.</li>
+            <li>Création de présentations PowerPoint interactives, modernes et sur mesure.</li>
+            <li>Mise en page automatique avancée de mémoires, thèses et rapports de stage.</li>
+            <li>Mise en conformité avec les guides méthodologiques universitaires ou d'entreprise.</li>
+            <li>Création et intégration d'infographies, de schémas et de graphiques personnalisés.</li>
           </ul>
         `
       }
     },
     ar: {
-      powerpoint: {
-        badge: "تصميم وعروض",
-        title: "عروض باوربوينت التقديمية الاحترافية",
-        color: "var(--color-powerpoint)",
-        body: `
-          <p>تستحق أفكاركم أن تُعرض بأفضل شكل ممكن. سواء كان ذلك لمناقشة أطروحة، أو عرض مشروع للمستثمرين، أو اجتماع عمل مهم، نحن نصمم عروضًا تقديمية احترافية، واضحة، ومنظمة ومؤثرة بصريًا.</p>
-          <p>تعتمد طريقتنا على تصميم هوية بصرية مخصصة، واحترام الهوية البصرية لعلامتكم التجارية وتبسيط الرسائل لتحقيق أقصى تأثير.</p>
-          <ul>
-            <li>تنظيم منطقي للمحتوى وكتابة الرسائل الأساسية.</li>
-            <li>تصميم رسومي فريد ومخصص (لا نستخدم قوالب جاهزة).</li>
-            <li>دمج الإنفوجرافيك، والرسوم التوضيحية والمخططات التفسيرية.</li>
-            <li>حركات وتأثيرات انتقالية سلسة واحترافية.</li>
-            <li>تسليم الملفات بصيغة قابلة للتعديل (.pptx) وبصيغة PDF عالية الجودة.</li>
-          </ul>
-        `
-      },
-      memoires: {
-        badge: "تنسيق أكاديمي ومهني",
-        title: "تنسيق الأطروحات والتقارير",
-        color: "var(--color-memoires)",
-        body: `
-          <p>يجب أن تعكس الوثيقة الأكاديمية أو المهنية عالية الجودة دقة محتواها من خلال تنسيق مثالي. نحن نتولى تنسيق وضبط أطروحات التخرج، رسائل الدكتوراه، تقارير التدريب، الكتب البيضاء أو تقارير النشاط السنوي.</p>
-          <p>نحرص على التطبيق الدقيق للمعايير المنهجية التي تفرضها جامعتكم أو الميثاق التحريري لشركتكم.</p>
-          <ul>
-            <li>تنسيق تلقائي متقدم (الهوامش، الرؤوس، وتذييل الصفحات).</li>
-            <li>إنشاء تلقائي لجدول المحتويات، الفهارس والمراجع.</li>
-            <li>توحيد الخطوط وأحجامها والمسافات البينية والاقتباسات.</li>
-            <li>تنسيق وتحسين المخططات والرسوم البيانية والجداول.</li>
-            <li>تسليم ملفات PDF جاهزة للطباعة وملفات وورد المصدرية (.docx).</li>
-          </ul>
-        `
-      },
-      cartes: {
+      cartesNotebooks: {
         badge: "الهوية والمطبوعات",
-        title: "بطاقات عمل فاخرة",
-        color: "var(--color-cartes)",
+        title: "بطاقات العمل ودفاتر الملاحظات المخصصة",
+        color: "var(--gold-primary)",
         body: `
-          <p>بطاقة العمل هي أول انطباع تتركه لعملائك. يجب أن تعبر فورًا عن جدية ومستوى نشاطك. نحن نصمم بطاقات عمل مخصصة تلفت الانتباه وتعكس شعارك وقيمك بشكل مثالي.</p>
-          <p>من التصاميم البسيطة والأنيقة إلى التصاميم الرسومية الأكثر جرأة، نقوم بملائمة الأسلوب مع مجال عملك.</p>
+          <p>عزز صورة عملك أو نظم يومك مع تصاميمنا المخصصة لبطاقات العمل ودفاتر التعلم والعمل.</p>
+          <p>من التصاميم البسيطة والأنيقة إلى الأكثر إبداعًا، نطبق هويتك البصرية على جميع مطبوعاتك.</p>
           <ul>
-            <li>تصميم أصلي ومخصص للوجهين وفقًا لتوجيهاتكم.</li>
-            <li>تناسق الألوان مع شعاركم وهويتكم البصرية الحالية.</li>
-            <li>تسليم ملفات عالية الدقة جاهزة للطباعة (CMJN، 300 DPI مع علامات القص).</li>
-            <li>نصائح الخبراء حول اختيار أنواع الورق واللمسات النهائية (تذهيب، ورنيش موضعي).</li>
-            <li>إمكانية تعديل البطاقة لعدة موظفين.</li>
+            <li>تصميم أصلي ومخصص لبطاقات العمل (الوجهين، دقة عالية).</li>
+            <li>تصميم رسومي لأغلفة الدفاتر والمذكرات المخصصة.</li>
+            <li>تنسيق الصفحات الداخلية (جداول، مفكرات، متابعة).</li>
+            <li>تسليم ملفات جاهزة للطباعة عالية الدقة.</li>
           </ul>
         `
       },
-      notebooks: {
-        badge: "مبيعات وهدايا",
-        title: "دفاتر ملاحظات مخصصة",
-        color: "var(--color-notebooks)",
+      pptMemoires: {
+        badge: "العروض والتنسيق",
+        title: "عروض باوربوينت، الأطروحات والتقارير",
+        color: "var(--navy-primary)",
         body: `
-          <p>سواء كانت أداة عمل لفرقك، أو هدية لعملائك، أو دفاتر للبيع، فإن دفتر الملاحظات المخصص هو وسيلة تواصل رائعة. نحن نصمم الغلاف الخارجي والتنسيق الداخلي لدفاترك حسب رغبتك.</p>
-          <p>نبتكر أغلفة مهنية وفنية تتضمن شعاراتكم وهويتكم البصرية.</p>
+          <p>اترك انطباعًا رائعًا خلال مناقشاتك أو اجتماعاتك مع مستندات وعروض عالية الجودة.</p>
+          <p>نجمع بين الجاذبية البصرية للعروض التقديمية الحديثة والدقة المنهجية لتنسيق الأطروحات والتقارير.</p>
           <ul>
-            <li>تصميم رسومي كامل للغلاف (الوجه، الخلفية والكعب).</li>
-            <li>تنسيق مخصص للصفحات الداخلية (منقط، مسطر، أبيض أو مفكرة).</li>
-            <li>دمج عناصر علامتك التجارية (تاريخ الشركة، صفحات تعريفية).</li>
-            <li>تسليم ملفات تنسيق عالية الدقة متوافقة مع متطلبات المطبعة.</li>
-            <li>متوافق مع جميع المقاسات (A4, A5) وأنواع التجليد.</li>
-          </ul>
-        `
-      },
-      sitesweb: {
-        badge: "حضور رقمي",
-        title: "تصميم مواقع إنترنت تعريفية",
-        color: "var(--color-sitesweb)",
-        body: `
-          <p>الموقع الإلكتروني المهني هو مفتاح مصداقيتك وأفضل أداة تسويقية تعمل لصالحك على مدار الساعة. نحن نصمم ونطور مواقع تعريفية حديثة، سريعة، متجاوبة ومحسنة لتحويل الزوار إلى عملاء.</p>
-          <p>يتم تطوير جميع مواقعنا بالتركيز على سرعة الأداء، الحماية والتوافق مع محركات البحث.</p>
-          <ul>
-            <li>تصميم فريد وعصري متوافق مع جميع الشاشات (متجاوب 100%).</li>
-            <li>هيكلة محسنة لمحركات البحث (SEO Ready).</li>
-            <li>إضافات تفاعلية (نماذج الاتصال، معارض الصور، روابط التواصل الاجتماعي).</li>
-            <li>سرعة تحميل فائقة (ضغط الصور وتطوير كود نظيف).</li>
-            <li>مرافقة لشراء اسم النطاق وإعداد الاستضافة وإطلاق الموقع.</li>
+            <li>إنشاء عروض باوربوينت تفاعلية وعصرية ومخصصة.</li>
+            <li>تنسيق احترافي كامل للأطروحات وتقارير التدريب.</li>
+            <li>الالتزام التام بالمعايير المنهجية الأكاديمية والمهنية.</li>
+            <li>إنشاء وتنسيق المخططات والرسوم البيانية.</li>
           </ul>
         `
       }

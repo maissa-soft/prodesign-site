@@ -23,22 +23,13 @@ const translations = {
 
     // Services Section
     "services-title": "Nos <span>Services</span>",
-    "services-subtitle": "Découvrez notre gamme complète de services créatifs pour propulser vos projets personnels et professionnels.",
+    "services-subtitle": "Découvrez notre gamme de services créatifs pour propulser vos projets personnels et professionnels.",
     
-    "service-ppt-title": "Présentations PowerPoint",
-    "service-ppt-desc": "Présentations professionnelles, claires et captivantes. Idéales pour vos pitchs, soutenances ou réunions d'affaires importantes.",
+    "service-cartes-notebooks-title": "Cartes de visite & Notebooks",
+    "service-cartes-notebooks-desc": "Conception de cartes de visite professionnelles uniques et création de cahiers & notebooks personnalisés sur mesure.",
     
-    "service-memoires-title": "Mémoires & Rapports",
-    "service-memoires-desc": "Mise en page de mémoires, rapports de stage et documents académiques ou professionnels. Rendu élégant et respect des normes.",
-    
-    "service-cartes-title": "Cartes de visite",
-    "service-cartes-desc": "Conception de cartes de visite modernes, uniques et professionnelles. Marquez les esprits lors de vos rencontres professionnelles.",
-    
-    "service-notebooks-title": "Notebooks Personnalisés",
-    "service-notebooks-desc": "Création de cahiers et notebooks personnalisés selon vos envies (couvertures uniques, intérieurs sur mesure). Idéal pour offrir ou s'organiser.",
-    
-    "service-sitesweb-title": "Sites Web",
-    "service-sitesweb-desc": "Développement de sites web vitrines modernes, rapides, responsives et adaptés à vos besoins. Renforcez votre présence en ligne.",
+    "service-ppt-memoires-title": "Présentations PowerPoint, Mémoires & Rapports",
+    "service-ppt-memoires-desc": "Présentations professionnelles percutantes, structuration et mise en page soignée de vos mémoires, thèses et rapports.",
     
     "btn-more": "En savoir plus",
 
@@ -79,11 +70,8 @@ const translations = {
     "form-email-ph": "exemple@domaine.com",
     "form-service-lbl": "Service demandé *",
     "form-service-select": "Sélectionnez un service",
-    "form-opt-ppt": "Présentations PowerPoint",
-    "form-opt-mem": "Mémoires & Rapports",
-    "form-opt-cards": "Cartes de visite",
-    "form-opt-note": "Notebooks Personnalisés",
-    "form-opt-web": "Sites Web",
+    "form-opt-cartes-notebooks": "Cartes de visite & Notebooks",
+    "form-opt-ppt-memoires": "Présentations PowerPoint, Mémoires & Rapports",
     "form-opt-other": "Autre Projet Digital",
     "form-msg-lbl": "Description du projet *",
     "form-msg-ph": "Décrivez votre besoin en quelques lignes...",
@@ -129,22 +117,13 @@ const translations = {
 
     // Services Section
     "services-title": "<span>خدماتنا</span>",
-    "services-subtitle": "اكتشف مجموعتنا الكاملة من الخدمات الإبداعية لدفع مشاريعكم الشخصية والمهنية.",
+    "services-subtitle": "اكتشف مجموعتنا من الخدمات الإبداعية لدفع مشاريعكم الشخصية والمهنية.",
     
-    "service-ppt-title": "عروض باوربوينت التقديمية",
-    "service-ppt-desc": "عروض تقديمية احترافية، واضحة وجذابة. مثالية لعروض المشاريع، مناقشات التخرج أو اجتماعات العمل المهمة.",
+    "service-cartes-notebooks-title": "بطاقات العمل ودفاتر الملاحظات",
+    "service-cartes-notebooks-desc": "تصميم بطاقات عمل احترافية وفريدة وإنشاء دفاتر ملاحظات مخصصة حسب الطلب.",
     
-    "service-memoires-title": "الأطروحات والتقارير",
-    "service-memoires-desc": "تنسيق كامل للأطروحات، تقارير التدريب والوثائق الأكاديمية أو المهنية. إخراج أنيق واحترام تام للمعايير.",
-    
-    "service-cartes-title": "بطاقات العمل",
-    "service-cartes-desc": "تصميم بطاقات عمل حديثة، فريدة واحترافية. اترك انطباعًا مميزًا خلال لقاءاتك المهنية.",
-    
-    "service-notebooks-title": "دفاتر ملاحظات مخصصة",
-    "service-notebooks-desc": "إنشاء دفاتر ملاحظات مخصصة وفقًا لرغباتكم (أغلفة فريدة وتنسيق داخلي حسب الطلب). مثالية للهدايا أو التنظيم.",
-    
-    "service-sitesweb-title": "مواقع إلكترونية",
-    "service-sitesweb-desc": "تطوير مواقع تعريفية حديثة، سriعة، متجاوبة ومناسبة لاحتياجاتكم. عززوا تواجدكم الرقمي.",
+    "service-ppt-memoires-title": "عروض باوربوينت، الأطروحات والتقارير",
+    "service-ppt-memoires-desc": "عروض تقديمية احترافية ومؤثرة وتنسيق كامل للأطروحات والتقارير الأكاديمية والمهنية.",
     
     "btn-more": "اقرأ المزيد",
 
@@ -184,12 +163,9 @@ const translations = {
     "form-email-lbl": "البريد الإلكتروني *",
     "form-email-ph": "example@domain.com",
     "form-service-lbl": "الخدمة المطلوبة *",
-    "form-service-select": "اختر الخدمة المطلوبة",
-    "form-opt-ppt": "عروض باوربوينت التقديمية",
-    "form-opt-mem": "الأطروحات والتقارير",
-    "form-opt-cards": "بطاقات العمل",
-    "form-opt-note": "دفاتر ملاحظات مخصصة",
-    "form-opt-web": "المواقع الإلكترونية",
+    "form-service-select": "اختر خدمة",
+    "form-opt-cartes-notebooks": "بطاقات العمل ودفاتر الملاحظات",
+    "form-opt-ppt-memoires": "عروض باوربوينت، الأطروحات والتقارير",
     "form-opt-other": "مشروع رقمي آخر",
     "form-msg-lbl": "وصف المشروع *",
     "form-msg-ph": "صف احتياجك في بضعة أسطر...",
