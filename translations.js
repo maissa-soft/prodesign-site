@@ -90,12 +90,12 @@ const translations = {
     "btn-submit": "Envoyer ma demande",
 
     // Footer
-    "footer-desc": "ProDesign est votre partenaire de confiance pour toutes vos créations digitales. Notre objectif est de valoriser votre image de marque à travers des designs percutants et sur mesure.",
+    "footer-desc": "KIRMIZI est votre partenaire de confiance pour toutes vos créations digitales. Notre objectif est de valoriser votre image de marque à travers des designs percutants et sur mesure.",
     "footer-links-title": "Liens Rapides",
     "footer-contact-title": "Contact",
     "footer-legal": "Mentions Légales",
     "footer-privacy": "Politique de Confidentialité",
-    "footer-copyright": "&copy; 2026 ProDesign. Tous droits réservés.",
+    "footer-copyright": "&copy; 2026 KIRMIZI. Tous droits réservés.",
 
     // Modals & Dynamic Alerts
     "modal-close": "Fermer",
@@ -196,12 +196,12 @@ const translations = {
     "btn-submit": "إرسال الطلب",
 
     // Footer
-    "footer-desc": "برو ديزاين هو شريكك الموثوق لجميع إبداعاتك الرقمية. هدفنا هو تعزيز صورة علامتك التجارية من خلال تصاميم قوية ومخصصة.",
+    "footer-desc": "KIRMIZI هو شريكك الموثوق لجميع إبداعاتك الرقمية. هدفنا هو تعزيز صورة علامتك التجارية من خلال تصاميم قوية ومخصصة.",
     "footer-links-title": "روابط سريعة",
     "footer-contact-title": "الاتصال",
     "footer-legal": "تنبيهات قانونية",
     "footer-privacy": "سياسة الخصوصية",
-    "footer-copyright": "&copy; 2026 برو ديزاين. جميع الحقوق محفوظة.",
+    "footer-copyright": "&copy; 2026 KIRMIZI. جميع الحقوق محفوظة.",
 
     // Modals & Dynamic Alerts
     "modal-close": "إغلاق",

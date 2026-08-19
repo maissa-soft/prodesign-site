@@ -3,14 +3,14 @@
 /* --- CUSTOM VARIABLES --- */
 :root {
   /* Brand Colors */
-  --navy-primary: #0f223f;
-  --navy-dark: #081324;
-  --navy-light: #1b355d;
-  --navy-muted: #556275;
-  --gold-primary: #cca43b;
-  --gold-light: #dfb957;
-  --gold-dark: #a58025;
-  --gold-bg-hover: #b8912e;
+  --navy-primary: #8B1A24; /* Burgundy */
+  --navy-dark: #5C1118;
+  --navy-light: #B2222E;
+  --navy-muted: #D88C94;
+  --gold-primary: #D9A05B;
+  --gold-light: #E6BC82;
+  --gold-dark: #A67339;
+  --gold-bg-hover: #C58B4A;
 
   /* Services Theme Colors */
   --color-powerpoint: #e05a36;
@@ -20,10 +20,10 @@
   --color-sitesweb: #0077b6;
 
   /* Neutrals */
-  --text-main: #334155;
-  --text-light: #64748b;
+  --text-main: #4A1A1E;
+  --text-light: #8B4A52;
   --text-white: #ffffff;
-  --bg-light: #f8fafc;
+  --bg-light: #FDF6EE;
   --bg-white: #ffffff;
   --border-light: #e2e8f0;
 
