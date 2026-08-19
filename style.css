@@ -211,9 +211,16 @@ header.scrolled .nav-container {
 }
 
 .logo-link img {
-  height: 48px;
-  width: auto;
+  height: auto;
+  width: 180px;
+  max-height: 80px;
   transition: var(--transition-smooth);
+}
+
+.nav-right-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .nav-menu {
@@ -1285,6 +1292,17 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .header-logo {
+    width: 120px !important;
+  }
+  .nav-right-wrapper {
+    gap: 10px !important;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
   .menu-toggle {
     display: flex;
   }
@@ -1338,6 +1356,10 @@ footer {
 }
 
 @media (max-width: 480px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
   .hero-title {
     font-size: 2.3rem;
   }
