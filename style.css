@@ -969,6 +969,10 @@ footer {
   width: auto;
   object-fit: contain;
   margin-bottom: 24px;
+  background-color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .footer-desc {
