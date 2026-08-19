@@ -43,8 +43,8 @@ const translations = {
     "btn-more": "En savoir plus",
 
     // Portfolio Section
-    "portfolio-title": "Nos <span>Réalisations</span>",
-    "portfolio-subtitle": "Explorez un échantillon de nos récents projets de design numérique et de développement.",
+    "portfolio-title": "Nos <span>Produits</span>",
+    "portfolio-subtitle": "Découvrez notre collection complète de papeterie éducative, carnets et articles d'apprentissage créatifs.",
     "filter-all": "Tous",
     "filter-docs": "Documents",
     "filter-print": "Imprimables & Notebooks",
@@ -149,8 +149,8 @@ const translations = {
     "btn-more": "اقرأ المزيد",
 
     // Portfolio Section
-    "portfolio-title": "<span>أعمالنا</span>",
-    "portfolio-subtitle": "استكشف عينة من مشاريعنا الأخيرة في التصميم الرقمي والتطوير.",
+    "portfolio-title": "<span>منتجاتنا</span>",
+    "portfolio-subtitle": "اكتشف مجموعتنا الكاملة من القرطاسية التعليمية، الدفاتر ومستلزمات التعلم الإبداعية.",
     "filter-all": "الكل",
     "filter-docs": "الوثائق",
     "filter-print": "المطبوعات والدفاتر",
