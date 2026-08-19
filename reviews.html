@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="KIRMIZI - Papeterie Éducative & Agence de création digitale spécialisée dans les présentations PowerPoint, rapports & mémoires, notebooks personnalisés, sites web et cartes de visite. Valorisez votre image !">
+  <meta name="keywords"
+    content="KIRMIZI, papeterie éducative, création digitale, mémoires, powerpoint, cartes de visite, notebook personnalisé, site web, design maroc, agence digitale">
+  <meta name="author" content="KIRMIZI">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.prodesign.com/">
+  <meta property="og:title" content="KIRMIZI | Papeterie Éducative & Design sur Mesure">
+  <meta property="og:description"
+    content="Des créations sur mesure, modernes et impactantes pour valoriser votre image de marque.">
+  <meta property="og:image" content="assets/hero_mockup.png">
+
+  <title>KIRMIZI | Papeterie Éducative & Créations Digitales</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo-symbol.svg">
+</head>
+
+<body>
+
+  <!-- --- HEADER / NAVIGATION --- -->
+  <header id="header">
+    <div class="container">
+      <nav class="nav-container">
+        <a href="#accueil" class="logo-link" id="logo-nav">
+          <img src="assets/logo-kirmizi.png" alt="KIRMIZI Logo" class="header-logo">
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html#accueil" class="nav-link" data-i18n="nav-accueil">Accueil</a></li>
+          <li><a href="products.html" class="nav-link" data-i18n="nav-realisations">Produits</a></li>
+          <li><a href="index.html#services" class="nav-link" data-i18n="nav-services">Services</a></li>
+        </ul>
+
+        <div class="nav-right-wrapper">
+          <!-- Language Switcher -->
+          <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="fr">FR</button>
+            <span class="lang-divider">|</span>
+            <button class="lang-btn" data-lang="ar">AR</button>
+          </div>
+
+          <button class="theme-toggle" aria-label="Toggle dark mode">
+            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="icon-moon" style="display:none;" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 0012 21a9 9 0 009-8.21z"></path>
+            </svg>
+          </button>
+
+          <div class="nav-cta">
+            <a href="contact.html" class="btn btn-primary" id="btn-devis" data-i18n="btn-devis">Demander un devis</a>
+          </div>
+        </div>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Spacer for fixed header -->
+  <div style="padding-top: 100px;"></div>
+
+  <!-- --- AVIS CLIENTS SECTION --- -->
+  <section class="reviews-section section-padding" id="avis">
+    <div class="container">
+      <h2 class="section-title" data-i18n="reviews-all-title">Tous les Avis <span>Clients</span></h2>
+      <p class="section-subtitle" data-i18n="reviews-subtitle">Découvrez les retours et messages de nos clients satisfaits par nos services et créations.</p>
+
+      <div class="reviews-grid">
+        <!-- 1. Notebooks review 1 -->
+        <div class="review-card" onclick="openHomeLightbox('assets/avis client/notebooks/Messenger_creation_06E2FD06-60DC-4F1C-856C-AC312C9F7A1F.jpeg')">
+          <img src="assets/avis client/notebooks/Messenger_creation_06E2FD06-60DC-4F1C-856C-AC312C9F7A1F.jpeg" alt="Avis Notebooks & Cartes">
+          <div class="review-card-overlay">
+            <span>Avis - Cartes & Notebooks</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+          </div>
+        </div>
+
+        <!-- 2. Notebooks review 2 -->
+        <div class="review-card" onclick="openHomeLightbox('assets/avis client/notebooks/Messenger_creation_C6DA05B4-5CFB-4FEF-ACE3-E229B3ACBFA9.jpeg')">
+          <img src="assets/avis client/notebooks/Messenger_creation_C6DA05B4-5CFB-4FEF-ACE3-E229B3ACBFA9.jpeg" alt="Avis Notebooks & Cartes">
+          <div class="review-card-overlay">
+            <span>Avis - Cartes & Notebooks</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+          </div>
+        </div>
+
+        <!-- 3. PPT & Mémoires review 1 -->
+        <div class="review-card" onclick="openHomeLightbox('assets/avis client/memoires et presentation/Messenger_creation_E2E1B324-1A52-4AE2-95EA-09642B015DC0.jpeg')">
+          <img src="assets/avis client/memoires et presentation/Messenger_creation_E2E1B324-1A52-4AE2-95EA-09642B015DC0.jpeg" alt="Avis PowerPoint & Mémoires">
+          <div class="review-card-overlay">
+            <span>Avis - Présentations & Mémoires</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+          </div>
+        </div>
+
+        <!-- 4. PPT & Mémoires review 2 -->
+        <div class="review-card" onclick="openHomeLightbox('assets/avis client/memoires et presentation/Screenshot_20260819_123353_com_hihonor_photos_SlotAlbumActivity_edit_305298606244682.jpg')">
+          <img src="assets/avis client/memoires et presentation/Screenshot_20260819_123353_com_hihonor_photos_SlotAlbumActivity_edit_305298606244682.jpg" alt="Avis PowerPoint & Mémoires">
+          <div class="review-card-overlay">
+            <span>Avis - Présentations & Mémoires</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+          </div>
+        </div>
+
+        <!-- 5. PPT & Mémoires review 3 -->
+        <div class="review-card" onclick="openHomeLightbox('assets/avis client/memoires et presentation/Screenshot_20260819_123949_com_instagram_android_TransparentModalActivity_edit_305379380269443.jpg')">
+          <img src="assets/avis client/memoires et presentation/Screenshot_20260819_123949_com_instagram_android_TransparentModalActivity_edit_305379380269443.jpg" alt="Avis PowerPoint & Mémoires">
+          <div class="review-card-overlay">
+            <span>Avis - Présentations & Mémoires</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL HOMEPAGE -->
+  <div class="lightbox-modal" id="homeLightboxModal">
+    <button class="lightbox-close" id="homeLightboxClose" aria-label="Fermer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <img src="" alt="Avis Client Grand Format" class="lightbox-img" id="homeLightboxImg">
+  </div>
+
+  <!-- --- FOOTER --- -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col-brand">
+          <img src="assets/logo-kirmizi.png" alt="KIRMIZI Logo" class="footer-logo">
+          <p class="footer-desc" data-i18n="footer-desc">
+            KIRMIZI est votre partenaire de confiance pour toutes vos créations digitales. Notre objectif est de
+            valoriser votre image de marque à travers des designs percutants et sur mesure.
+          </p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/kirmizi.papeterie" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/kirmizi.papeterie" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer-links-title">Liens Rapides</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#accueil" class="footer-link" data-i18n="nav-accueil">Accueil</a></li>
+            <li><a href="index.html#services" class="footer-link" data-i18n="nav-services">Nos Services</a></li>
+            <li><a href="index.html#avantages" class="footer-link" data-i18n="nav-avantages">Avantages</a></li>
+            <li><a href="products.html" class="footer-link" data-i18n="nav-realisations">Réalisations</a></li>
+            <li><a href="contact.html" class="footer-link" data-i18n="nav-contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer-contact-title">Contact</h4>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span data-i18n="contact-address-val">Constantine, Algérie</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>sekhri.isra@gmail.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.5 19.5 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span>0657693945</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer-copyright">© 2026 KIRMIZI. Tous droits réservés.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link" data-i18n="footer-legal">Mentions Légales</a>
+          <a href="#" class="footer-bottom-link" data-i18n="footer-privacy">Politique de Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Scripts -->
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -35,6 +35,7 @@ const translations = {
 
     // Portfolio Section
     "portfolio-title": "Nos <span>Produits</span>",
+    "portfolio-all-title": "Tous nos <span>Produits</span>",
     "portfolio-subtitle": "Découvrez notre collection complète de papeterie éducative, carnets et articles d'apprentissage créatifs.",
     "filter-all": "Tous",
     "filter-docs": "Documents",
@@ -95,6 +96,7 @@ const translations = {
 
     // Testimonials / Avis Clients & Services
     "reviews-title": "Avis <span>Clients</span>",
+    "reviews-all-title": "Tous les Avis <span>Clients</span>",
     "reviews-subtitle": "Découvrez les retours et messages de nos clients satisfaits par nos services et créations.",
     "reviews-service-title": "Avis & Retours Clients pour ce Service",
     "products-service-title": "Exemples de Produits Associés",
@@ -139,6 +141,7 @@ const translations = {
 
     // Portfolio Section
     "portfolio-title": "<span>منتجاتنا</span>",
+    "portfolio-all-title": "جميع <span>منتجاتنا</span>",
     "portfolio-subtitle": "اكتشف مجموعتنا الكاملة من القرطاسية التعليمية، الدفاتر ومستلزمات التعلم الإبداعية.",
     "filter-all": "الكل",
     "filter-docs": "الوثائق",
@@ -199,6 +202,7 @@ const translations = {
 
     // Testimonials / Avis Clients & Services
     "reviews-title": "آراء <span>العملاء</span>",
+    "reviews-all-title": "جميع <span>آراء العملاء</span>",
     "reviews-subtitle": "اكتشف تقييمات ورسائل عملائنا السعداء بخدماتنا وإبداعاتنا.",
     "reviews-service-title": "آراء وتقييمات العملاء لهذه الخدمة",
     "products-service-title": "نماذج المنتجات المرتبطة بهذه الخدمة",
