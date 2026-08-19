@@ -93,12 +93,15 @@ const translations = {
     "btn-reset": "Envoyer une autre demande",
     "sending": "Envoi en cours...",
 
-    // Testimonials / Avis Clients
+    // Testimonials / Avis Clients & Services
     "reviews-title": "Avis <span>Clients</span>",
     "reviews-subtitle": "Découvrez les retours et messages de nos clients satisfaits par nos services et créations.",
     "reviews-service-title": "Avis & Retours Clients pour ce Service",
+    "products-service-title": "Exemples de Produits Associés",
     "reviews-zoom": "Cliquer pour agrandir",
-    "btn-back-services": "Retour aux services"
+    "btn-back-services": "Retour aux services",
+    "btn-more-products": "Voir tous les produits",
+    "btn-more-reviews": "Voir tous les avis clients"
   },
   ar: {
     // Navigation
@@ -194,11 +197,14 @@ const translations = {
     "btn-reset": "إرسال طلب آخر",
     "sending": "جاري الإرسال...",
 
-    // Testimonials / Avis Clients
+    // Testimonials / Avis Clients & Services
     "reviews-title": "آراء <span>العملاء</span>",
     "reviews-subtitle": "اكتشف تقييمات ورسائل عملائنا السعداء بخدماتنا وإبداعاتنا.",
     "reviews-service-title": "آراء وتقييمات العملاء لهذه الخدمة",
+    "products-service-title": "نماذج المنتجات المرتبطة بهذه الخدمة",
     "reviews-zoom": "انقر لتكبير الصورة",
-    "btn-back-services": "العودة إلى الخدمات"
+    "btn-back-services": "العودة إلى الخدمات",
+    "btn-more-products": "عرض جميع المنتجات",
+    "btn-more-reviews": "عرض جميع آراء العملاء"
   }
 };
