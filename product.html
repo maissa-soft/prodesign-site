@@ -172,11 +172,22 @@
       
       // Update back text based on language
       const lang = localStorage.getItem('prodesign_lang') || 'fr';
+      const orderBtn = document.querySelector('.btn-primary');
+      
+      let message = `Bonjour, je souhaite commander le produit : ${title || 'un article'} au prix de ${price || ''}.`;
+      
       if(lang === 'ar') {
         document.getElementById('back-text').textContent = 'العودة إلى المنتجات';
-        document.querySelector('.btn-primary').textContent = 'طلب هذا المنتج';
+        orderBtn.textContent = 'طلب هذا المنتج';
         document.getElementById('product-desc').textContent = 'تم تصميم هذا المنتج التعليمي من قرمزي بعناية لتقديم أفضل تجربة. مثالي للتنظيم والتعلم، وهو جزء من مجموعتنا الحصرية.';
         document.querySelector('.back-link svg').style.transform = 'scaleX(-1)';
+        message = `مرحباً، أود طلب المنتج: ${title || 'منتج'} بسعر ${price || ''}.`;
+      }
+      
+      // Set WhatsApp Link
+      if (orderBtn) {
+        orderBtn.href = `https://wa.me/213556081486?text=${encodeURIComponent(message)}`;
+        orderBtn.target = "_blank";
       }
     });
   </script>
